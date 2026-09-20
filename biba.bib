@@ -1,387 +1,548 @@
-@article{OpenDR2014,
-  title={OpenDR: An Approximate Differentiable Renderer},
-  author={Loper, Matthew M. and Black, Michael J.},
-  journal={Computer Vision -- ECCV 2014},
-  pages={154--169},
-  year={2014},
-  publisher={Springer International Publishing}
+% Corrected bibliography, verified 2026-09-20.
+% Removed duplicate key Munkberg_2022_CVPR; use NVDiffRec instead.
+% Removed duplicate key nvdiffrecmc2022; use NVDiffRecMC instead.
+
+@incollection{OpenDR2014,
+  author    = {Loper, Matthew M. and Black, Michael J.},
+  title     = {{OpenDR}: An Approximate Differentiable Renderer},
+  booktitle = {Computer Vision -- ECCV 2014},
+  publisher = {Springer International Publishing},
+  year      = {2014},
+  pages     = {154--169},
+  isbn      = {978-3-319-10584-0},
+  doi       = {10.1007/978-3-319-10584-0_11},
+  url       = {https://doi.org/10.1007/978-3-319-10584-0_11}
 }
 
 @article{NeRF2020,
-  title={NeRF: representing scenes as neural radiance fields for view synthesis},
-  author={Mildenhall, Ben and Srinivasan, Pratul P. and Tancik, Matthew and Barron, Jonathan T. and Ramamoorthi, Ravi and Ng, Ren},
-  journal={Commun. ACM},
-  pages={99--106},
-  year={2021},
-  publisher={Association for Computing Machinery}
+  author    = {Mildenhall, Ben and Srinivasan, Pratul P. and Tancik, Matthew and Barron, Jonathan T. and Ramamoorthi, Ravi and Ng, Ren},
+  title     = {{NeRF}: Representing Scenes as Neural Radiance Fields for View Synthesis},
+  journal   = {Communications of the ACM},
+  publisher = {Association for Computing Machinery},
+  year      = {2022},
+  month     = jan,
+  volume    = {65},
+  number    = {1},
+  pages     = {99--106},
+  doi       = {10.1145/3503250},
+  url       = {https://doi.org/10.1145/3503250}
 }
 
 @article{3DGS,
-  author = {Kerbl, Bernhard and Kopanas, Georgios and Leimkuehler, Thomas and Drettakis, George},
-  title = {3D Gaussian Splatting for Real-Time Radiance Field Rendering},
-  year = {2023},
-  journal = {ACM Trans. Graph.},
-  volume = {42},
-  number = {4},
-  publisher = {Association for Computing Machinery}
-}
-
-@article{2DGS,
-  author = {Huang, Binbin and Yu, Zehao and Chen, Anpei and Geiger, Andreas and Gao, Shenghua},
-  title = {2D Gaussian Splatting for Geometrically Accurate Radiance Fields},
-  year = {2024},
+  author    = {Kerbl, Bernhard and Kopanas, Georgios and Leimkuehler, Thomas and Drettakis, George},
+  title     = {{3D} Gaussian Splatting for Real-Time Radiance Field Rendering},
+  journal   = {ACM Transactions on Graphics},
   publisher = {Association for Computing Machinery},
-  journal={ACM SIGGRAPH 2024 Conference Papers},
+  year      = {2023},
+  month     = jul,
+  volume    = {42},
+  number    = {4},
+  articleno = {139},
+  numpages  = {14},
+  pages     = {139:1--139:14},
+  doi       = {10.1145/3592433},
+  url       = {https://doi.org/10.1145/3592433}
 }
 
-@article{SuGaR,
-  title={SuGaR: Surface-Aligned Gaussian Splatting for Efficient 3D Mesh Reconstruction and High-Quality Mesh Rendering},
-  author={Gu{\'e}don, Antoine and Lepetit, Vincent},
-  journal={CVPR},
-  year={2024}
+@inproceedings{2DGS,
+  author    = {Huang, Binbin and Yu, Zehao and Chen, Anpei and Geiger, Andreas and Gao, Shenghua},
+  title     = {{2D} Gaussian Splatting for Geometrically Accurate Radiance Fields},
+  booktitle = {ACM SIGGRAPH 2024 Conference Papers},
+  publisher = {Association for Computing Machinery},
+  year      = {2024},
+  month     = jul,
+  pages     = {1--11},
+  doi       = {10.1145/3641519.3657428},
+  url       = {https://doi.org/10.1145/3641519.3657428}
+}
+
+@inproceedings{SuGaR,
+  author    = {Gu{\'e}don, Antoine and Lepetit, Vincent},
+  title     = {{SuGaR}: Surface-Aligned Gaussian Splatting for Efficient {3D} Mesh Reconstruction and High-Quality Mesh Rendering},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  publisher = {IEEE},
+  year      = {2024},
+  month     = jun,
+  pages     = {5354--5363},
+  doi       = {10.1109/CVPR52733.2024.00512},
+  url       = {https://doi.org/10.1109/CVPR52733.2024.00512}
 }
 
 @article{MiLO,
-    author       = {Gu{\'e}don, Antoine and Gomez, Diego and Maruani, Nissim and Gong, Bingchen and Drettakis, George and Ovsjanikov, Maks},
-    title        = {MILo: Mesh-In-the-Loop Gaussian Splatting for Detailed and Efficient Surface Reconstruction},
-    journal      = {ACM Transactions on Graphics},
-    year         = {2025},
+  author    = {Gu{\'e}don, Antoine and Gomez, Diego and Maruani, Nissim and Gong, Bingchen and Drettakis, George and Ovsjanikov, Maks},
+  title     = {{MILo}: Mesh-In-the-Loop Gaussian Splatting for Detailed and Efficient Surface Reconstruction},
+  journal   = {ACM Transactions on Graphics},
+  publisher = {Association for Computing Machinery},
+  year      = {2025},
+  month     = dec,
+  volume    = {44},
+  number    = {6},
+  articleno = {223},
+  numpages  = {15},
+  pages     = {223:1--223:15},
+  doi       = {10.1145/3763339},
+  url       = {https://doi.org/10.1145/3763339}
 }
 
-@article{TrigSplat,
-  title = {Triangle Splatting for Real-Time Radiance Field Rendering},
-  author = {Held, Jan and Vandeghen, Renaud and Deliege, Adrien and Hamdi, Abdullah and Cioppa, Anthony and Giancola, Silvio and Vedaldi, Andrea and Ghanem, Bernard and Tagliasacchi, Andrea and Van Droogenbroeck, Marc},
-  journal = {arXiv},
-  year = {2025},
+@inproceedings{TrigSplat,
+  author    = {Held, Jan and Vandeghen, Renaud and Deliege, Adrien and Hamdi, Abdullah and Giancola, Silvio and Rebain, Daniel and Cioppa, Anthony and Ghanem, Bernard and Vedaldi, Andrea and Tagliasacchi, Andrea and Van Droogenbroeck, Marc},
+  title     = {Triangle Splatting for Real-Time Radiance Field Rendering},
+  booktitle = {2026 International Conference on 3D Vision (3DV)},
+  publisher = {IEEE},
+  year      = {2026},
+  month     = mar,
+  pages     = {1248--1257},
+  doi       = {10.1109/3DV69130.2026.00123},
+  url       = {https://doi.org/10.1109/3DV69130.2026.00123}
 }
 
-@article{MeshSplat,
-  title = {MeshSplatting: Differentiable Rendering with Opaque Meshes},
-  author = {Held, Jan and Son, Sanghyun and Vandeghen, Renaud and Rebain, Daniel and Gadelha, Matheus and Zhou, Yi and Cioppa, Anthony and Lin, Ming C. and Van Droogenbroeck, Marc and Tagliasacchi, Andrea},
-  journal = {arXiv},
-  year = {2025},
+@inproceedings{MeshSplat,
+  author    = {Held, Jan and Son, Sanghyun and Vandeghen, Renaud and Rebain, Daniel and Gadelha, Matheus and Zhou, Yi and Cioppa, Anthony and Lin, Ming C. and Van Droogenbroeck, Marc and Tagliasacchi, Andrea},
+  title     = {{MeshSplatting}: Differentiable Rendering with Opaque Meshes},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2026},
+  month     = jun,
+  pages     = {7320--7329},
+  url       = {https://openaccess.thecvf.com/content/CVPR2026/html/Held_MeshSplatting_Differentiable_Rendering_with_Opaque_Meshes_CVPR_2026_paper.html}
 }
 
-@article{NeuS,
-  author = {Wang, Peng and Liu, Lingjie and Liu, Yuan and Theobalt, Christian and Komura, Taku and Wang, Wenping},
+@inproceedings{NeuS,
+  author    = {Wang, Peng and Liu, Lingjie and Liu, Yuan and Theobalt, Christian and Komura, Taku and Wang, Wenping},
+  title     = {{NeuS}: Learning Neural Implicit Surfaces by Volume Rendering for Multi-view Reconstruction},
   booktitle = {Advances in Neural Information Processing Systems},
-  pages = {27171--27183},
+  editor    = {Ranzato, Marc'Aurelio and Beygelzimer, Alina and Dauphin, Yann N. and Liang, Percy and Vaughan, Jennifer Wortman},
   publisher = {Curran Associates, Inc.},
-  title = {NeuS: Learning Neural Implicit Surfaces by Volume Rendering for Multi-view Reconstruction},
-  year={2021},
+  year      = {2021},
+  volume    = {34},
+  pages     = {27171--27183},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2021/hash/e41e164f7485ec4a28741a2d0ea41c74-Abstract.html}
 }
 
-@article{NeuS2,
+@inproceedings{NeuS2,
   author    = {Wang, Yiming and Han, Qin and Habermann, Marc and Daniilidis, Kostas and Theobalt, Christian and Liu, Lingjie},
-  title     = {NeuS2: Fast Learning of Neural Implicit Surfaces for Multi-view Reconstruction},
+  title     = {{NeuS2}: Fast Learning of Neural Implicit Surfaces for Multi-view Reconstruction},
   booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-  month     = 10,
+  publisher = {IEEE},
   year      = {2023},
-  pages     = {3295-3306}
+  month     = oct,
+  pages     = {3295--3306},
+  doi       = {10.1109/ICCV51070.2023.00305},
+  url       = {https://doi.org/10.1109/ICCV51070.2023.00305}
 }
 
 @article{InstantNGP,
-    author = {M\"{u}ller, Thomas and Evans, Alex and Schied, Christoph and Keller, Alexander},
-    title = {Instant neural graphics primitives with a multiresolution hash encoding},
-    year = {2022},
-    publisher = {Association for Computing Machinery},
-    volume = {41},
-    number = {4},
-    journal = {ACM Trans. Graph.},
+  author    = {M{\"u}ller, Thomas and Evans, Alex and Schied, Christoph and Keller, Alexander},
+  title     = {Instant Neural Graphics Primitives with a Multiresolution Hash Encoding},
+  journal   = {ACM Transactions on Graphics},
+  publisher = {Association for Computing Machinery},
+  year      = {2022},
+  month     = jul,
+  volume    = {41},
+  number    = {4},
+  articleno = {102},
+  numpages  = {15},
+  pages     = {102:1--102:15},
+  doi       = {10.1145/3528223.3530127},
+  url       = {https://doi.org/10.1145/3528223.3530127}
 }
 
-@article{NeuralAngelo,
-    author    = {Li, Zhaoshuo and M\"uller, Thomas and Evans, Alex and Taylor, Russell H. and Unberath, Mathias and Liu, Ming-Yu and Lin, Chen-Hsuan},
-    title     = {Neuralangelo: High-Fidelity Neural Surface Reconstruction},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    month     = 06,
-    year      = {2023},
-    pages     = {8456-8465}
+@inproceedings{NeuralAngelo,
+  author    = {Li, Zhaoshuo and M{\"u}ller, Thomas and Evans, Alex and Taylor, Russell H. and Unberath, Mathias and Liu, Ming-Yu and Lin, Chen-Hsuan},
+  title     = {{Neuralangelo}: High-Fidelity Neural Surface Reconstruction},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  publisher = {IEEE},
+  year      = {2023},
+  month     = jun,
+  pages     = {8456--8465},
+  doi       = {10.1109/CVPR52729.2023.00817},
+  url       = {https://doi.org/10.1109/CVPR52729.2023.00817}
 }
 
 @article{NVDiffRast,
-  title   = {Modular Primitives for High-Performance Differentiable Rendering},
-  author  = {Samuli Laine and Janne Hellsten and Tero Karras and Yeongho Seol and Jaakko Lehtinen and Timo Aila},
-  journal = {ACM Transactions on Graphics},
-  year    = {2020},
-  volume  = {39},
-  number  = {6}
+  author    = {Laine, Samuli and Hellsten, Janne and Karras, Tero and Seol, Yeongho and Lehtinen, Jaakko and Aila, Timo},
+  title     = {Modular Primitives for High-Performance Differentiable Rendering},
+  journal   = {ACM Transactions on Graphics},
+  publisher = {Association for Computing Machinery},
+  year      = {2020},
+  month     = nov,
+  volume    = {39},
+  number    = {6},
+  articleno = {194},
+  numpages  = {14},
+  pages     = {194:1--194:14},
+  doi       = {10.1145/3414685.3417861},
+  url       = {https://doi.org/10.1145/3414685.3417861}
 }
 
-@article{NVDiffRec,
-    author    = {Munkberg, Jacob and Hasselgren, Jon and Shen, Tianchang and Gao, Jun and Chen, Wenzheng 
-                    and Evans, Alex and M\"uller, Thomas and Fidler, Sanja},
-    title     = "{Extracting Triangular 3D Models, Materials, and Lighting From Images}",
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    month     = 06,
-    year      = {2022},
-    pages     = {8280-8290}
+@inproceedings{NVDiffRec,
+  author    = {Munkberg, Jacob and Hasselgren, Jon and Shen, Tianchang and Gao, Jun and Chen, Wenzheng and Evans, Alex and M{\"u}ller, Thomas and Fidler, Sanja},
+  title     = {Extracting Triangular {3D} Models, Materials, and Lighting From Images},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  publisher = {IEEE},
+  year      = {2022},
+  month     = jun,
+  pages     = {8280--8290},
+  doi       = {10.1109/CVPR52688.2022.00810},
+  url       = {https://doi.org/10.1109/CVPR52688.2022.00810}
 }
 
-@article{NVDiffRecMC,
-    author = {Jon Hasselgren and Nikolai Hofmann and Jacob Munkberg},
-    title = "{Shape, Light, and Material Decomposition from Images using Monte Carlo Rendering and Denoising}",
-    journal = {arXiv:2206.03380},
-    year = {2022}
+@inproceedings{NVDiffRecMC,
+  author    = {Hasselgren, Jon and Hofmann, Nikolai and Munkberg, Jacob},
+  title     = {Shape, Light, and Material Decomposition from Images Using Monte Carlo Rendering and Denoising},
+  booktitle = {Advances in Neural Information Processing Systems},
+  editor    = {Koyejo, Sanmi and Mohamed, Sidahmed and Agarwal, Alekh and Belgrave, Danielle and Cho, Kyunghyun and Oh, Alice},
+  publisher = {Curran Associates, Inc.},
+  year      = {2022},
+  volume    = {35},
+  pages     = {22856--22869},
+  doi       = {10.52202/068431-1661},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2022/hash/8fcb27984bf16ca03cad643244ec470d-Abstract-Conference.html}
 }
 
 @article{SGORast,
   author    = {Deliot, Thomas and Heitz, Eric and Belcour, Laurent},
   title     = {Transforming a Non-Differentiable Rasterizer into a Differentiable One with Stochastic Gradient Estimation},
-  year      = {2024},
+  journal   = {Proceedings of the ACM on Computer Graphics and Interactive Techniques},
   publisher = {Association for Computing Machinery},
+  year      = {2024},
+  month     = may,
   volume    = {7},
   number    = {1},
-  journal   = {Proc. ACM Comput. Graph. Interact. Tech.},
+  pages     = {1--16},
+  doi       = {10.1145/3651298},
+  url       = {https://doi.org/10.1145/3651298}
 }
 
 @article{ES2018,
-    author     = {Li, Tzu-Mao and Aittala, Miika and Durand, Fr\'{e}do and Lehtinen, Jaakko},
-    title      = {Differentiable Monte Carlo ray tracing through edge sampling},
-    year       = {2018},
-    publisher  = {Association for Computing Machinery},
-    volume     = {37},
-    number     = {6},
-    journal    = {ACM Trans. Graph.},
+  author    = {Li, Tzu-Mao and Aittala, Miika and Durand, Fr{\'e}do and Lehtinen, Jaakko},
+  title     = {Differentiable Monte Carlo Ray Tracing through Edge Sampling},
+  journal   = {ACM Transactions on Graphics},
+  publisher = {Association for Computing Machinery},
+  year      = {2018},
+  month     = dec,
+  volume    = {37},
+  number    = {6},
+  articleno = {222},
+  numpages  = {11},
+  pages     = {222:1--222:11},
+  doi       = {10.1145/3272127.3275109},
+  url       = {https://doi.org/10.1145/3272127.3275109}
 }
 
 @article{Reparam2019,
-    author = {Loubet, Guillaume and Holzschuch, Nicolas and Jakob, Wenzel},
-    title = {Reparameterizing discontinuous integrands for differentiable rendering},
-    year = {2019},
-    publisher = {Association for Computing Machinery},
-    volume = {38},
-    number = {6},
-    journal = {ACM Trans. Graph.},
+  author    = {Loubet, Guillaume and Holzschuch, Nicolas and Jakob, Wenzel},
+  title     = {Reparameterizing Discontinuous Integrands for Differentiable Rendering},
+  journal   = {ACM Transactions on Graphics},
+  publisher = {Association for Computing Machinery},
+  year      = {2019},
+  month     = nov,
+  volume    = {38},
+  number    = {6},
+  articleno = {228},
+  numpages  = {14},
+  pages     = {228:1--228:14},
+  doi       = {10.1145/3355089.3356510},
+  url       = {https://doi.org/10.1145/3355089.3356510}
 }
 
 @article{WAS2020,
-    author     = {Bangaru, Sai Praveen and Li, Tzu-Mao and Durand, Fr\'{e}do},
-    title      = {Unbiased warped-area sampling for differentiable rendering},
-    year       = {2020},
-    publisher  = {Association for Computing Machinery},
-    volume     = {39},
-    number     = {6},
-    journal    = {ACM Trans. Graph.},
+  author    = {Bangaru, Sai Praveen and Li, Tzu-Mao and Durand, Fr{\'e}do},
+  title     = {Unbiased Warped-Area Sampling for Differentiable Rendering},
+  journal   = {ACM Transactions on Graphics},
+  publisher = {Association for Computing Machinery},
+  year      = {2020},
+  month     = nov,
+  volume    = {39},
+  number    = {6},
+  articleno = {245},
+  numpages  = {18},
+  pages     = {245:1--245:18},
+  doi       = {10.1145/3414685.3417833},
+  url       = {https://doi.org/10.1145/3414685.3417833}
 }
 
 @article{Nicolet,
-    author = {Nicolet, Baptiste and Jacobson, Alec and Jakob, Wenzel},
-    title = {Large steps in inverse rendering of geometry},
-    year = {2021},
-    publisher = {Association for Computing Machinery},
-    volume = {40},
-    number = {6},
-    journal = {ACM Trans. Graph.},
+  author    = {Nicolet, Baptiste and Jacobson, Alec and Jakob, Wenzel},
+  title     = {Large Steps in Inverse Rendering of Geometry},
+  journal   = {ACM Transactions on Graphics},
+  publisher = {Association for Computing Machinery},
+  year      = {2021},
+  month     = dec,
+  volume    = {40},
+  number    = {6},
+  pages     = {1--13},
+  doi       = {10.1145/3478513.3480501},
+  url       = {https://doi.org/10.1145/3478513.3480501}
 }
 
 @article{WASSDF2022,
-    author = {Vicini, Delio and Speierer, S\'{e}bastien and Jakob, Wenzel},
-    title = {Differentiable signed distance function rendering},
-    year = {2022},
-    publisher = {Association for Computing Machinery},
-    volume = {41},
-    number = {4},
-    journal = {ACM Trans. Graph.},
+  author    = {Vicini, Delio and Speierer, S{\'e}bastien and Jakob, Wenzel},
+  title     = {Differentiable Signed Distance Function Rendering},
+  journal   = {ACM Transactions on Graphics},
+  publisher = {Association for Computing Machinery},
+  year      = {2022},
+  month     = jul,
+  volume    = {41},
+  number    = {4},
+  articleno = {125},
+  numpages  = {18},
+  pages     = {125:1--125:18},
+  doi       = {10.1145/3528223.3530139},
+  url       = {https://doi.org/10.1145/3528223.3530139}
 }
 
-@article{DSDF2022,
-    author    = {Bangaru, Sai Praveen and Gharbi, Michael and Luan, Fujun and Li, Tzu-Mao and Sunkavalli, Kalyan and Hasan, Milos and Bi, Sai and Xu, Zexiang and Bernstein, Gilbert and Durand, Fredo},
-    title     = {Differentiable Rendering of Neural SDFs through Reparameterization},
-    year      = {2022},
-    publisher = {Association for Computing Machinery},
-    booktitle = {SIGGRAPH Asia 2022 Conference Papers},
+@inproceedings{DSDF2022,
+  author    = {Bangaru, Sai Praveen and Gharbi, Michael and Luan, Fujun and Li, Tzu-Mao and Sunkavalli, Kalyan and Hasan, Milos and Bi, Sai and Xu, Zexiang and Bernstein, Gilbert and Durand, Fredo},
+  title     = {Differentiable Rendering of Neural {SDFs} through Reparameterization},
+  booktitle = {SIGGRAPH Asia 2022 Conference Papers},
+  publisher = {Association for Computing Machinery},
+  year      = {2022},
+  month     = nov,
+  pages     = {1--9},
+  doi       = {10.1145/3550469.3555397},
+  url       = {https://doi.org/10.1145/3550469.3555397}
 }
 
-@article{Relax2024,
-    author    = {Wang, Zichen and Deng, Xi and Zhang, Ziyi and Jakob, Wenzel and Marschner, Steve},
-    title     = {A Simple Approach to Differentiable Rendering of SDFs},
-    year      = {2024},
-    publisher = {Association for Computing Machinery},
-    booktitle = {SIGGRAPH Asia 2024 Conference Papers},
+@inproceedings{Relax2024,
+  author    = {Wang, Zichen and Deng, Xi and Zhang, Ziyi and Jakob, Wenzel and Marschner, Steve},
+  title     = {A Simple Approach to Differentiable Rendering of {SDFs}},
+  booktitle = {SIGGRAPH Asia 2024 Conference Papers},
+  publisher = {Association for Computing Machinery},
+  year      = {2024},
+  month     = dec,
+  pages     = {1--11},
+  doi       = {10.1145/3680528.3687573},
+  url       = {https://doi.org/10.1145/3680528.3687573}
 }
 
 @article{HanssonSoderlund,
-	title={Ray tracing of signed distance function grids},
-	author={S{\"o}derlund, Herman Hansson and Evans, Alex and Akenine-M{\"o}ller, Tomas},
-	journal={Journal of Computer Graphics Techniques},
-	volume={11},
-	number={3},
-	year={2022}
+  author  = {Hansson S{\"o}derlund, Herman and Evans, Alex and Akenine-M{\"o}ller, Tomas},
+  title   = {Path Tracing of Signed Distance Function Grids},
+  journal = {Journal of Computer Graphics Techniques},
+  year    = {2022},
+  month   = sep,
+  volume  = {11},
+  number  = {3},
+  pages   = {94--113},
+  url     = {https://jcgt.org/published/0011/03/06/}
 }
 
 @article{RedistFSM,
-	author   = {Detrixhe, Miles and Gibou, Frédéric and Min, Chohong},
-	title    = {A parallel fast sweeping method for the Eikonal equation},
-	journal  = {Journal of Computational Physics},
-	volume   = {237},
-	pages    = {46-55},
-	year     = {2013},
+  author    = {Detrixhe, Miles and Gibou, Fr{\'e}d{\'e}ric and Min, Chohong},
+  title     = {A Parallel Fast Sweeping Method for the Eikonal Equation},
+  journal   = {Journal of Computational Physics},
+  publisher = {Elsevier},
+  year      = {2013},
+  month     = mar,
+  volume    = {237},
+  pages     = {46--55},
+  doi       = {10.1016/j.jcp.2012.11.042},
+  url       = {https://doi.org/10.1016/j.jcp.2012.11.042}
 }
 
+% Inverse rendering and relighting
 
-% Реконструкция источников
-
-@InProceedings{Azinovic_2019_CVPR,
-  author = {Azinovic, Dejan and Li, Tzu-Mao and Kaplanyan, Anton and Niessner, Matthias},
-  title = {Inverse Path Tracing for Joint Material and Lighting Estimation},
+@inproceedings{Azinovic_2019_CVPR,
+  author    = {Azinovic, Dejan and Li, Tzu-Mao and Kaplanyan, Anton and Niessner, Matthias},
+  title     = {Inverse Path Tracing for Joint Material and Lighting Estimation},
   booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  month = {06},
-  year = {2019}
+  publisher = {IEEE},
+  year      = {2019},
+  month     = jun,
+  pages     = {2447--2456},
+  doi       = {10.1109/CVPR.2019.00255},
+  url       = {https://doi.org/10.1109/CVPR.2019.00255}
 }
 
 @inproceedings{li2020inverse,
-  title={Inverse rendering for complex indoor scenes: Shape, spatially-varying lighting and svbrdf from a single image},
-  author={Li, Zhengqin and Shafiei, Mohammad and Ramamoorthi, Ravi and Sunkavalli, Kalyan and Chandraker, Manmohan},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={2475--2484},
-  year={2020}
+  author    = {Li, Zhengqin and Shafiei, Mohammad and Ramamoorthi, Ravi and Sunkavalli, Kalyan and Chandraker, Manmohan},
+  title     = {Inverse Rendering for Complex Indoor Scenes: Shape, Spatially-Varying Lighting and {SVBRDF} From a Single Image},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  publisher = {IEEE},
+  year      = {2020},
+  month     = jun,
+  pages     = {2475--2484},
+  doi       = {10.1109/CVPR42600.2020.00255},
+  url       = {https://doi.org/10.1109/CVPR42600.2020.00255}
 }
 
 @inproceedings{physg2021,
-  title={{PhySG}: {I}nverse Rendering with Spherical Gaussians for Physics-based Material Editing and Relighting},
-  author={Kai Zhang and Fujun Luan and Qianqian Wang and Kavita Bala and Noah Snavely},
-  booktitle={The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year={2021}
+  author    = {Zhang, Kai and Luan, Fujun and Wang, Qianqian and Bala, Kavita and Snavely, Noah},
+  title     = {{PhySG}: Inverse Rendering With Spherical Gaussians for Physics-Based Material Editing and Relighting},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  publisher = {IEEE},
+  year      = {2021},
+  month     = jun,
+  pages     = {5453--5462},
+  doi       = {10.1109/CVPR46437.2021.00541},
+  url       = {https://doi.org/10.1109/CVPR46437.2021.00541}
 }
 
-% Реконструкция источников NEW
-
-@InProceedings{Choi_2023_CVPR,
-    author    = {Choi, JunYong and Lee, SeokYeong and Park, Haesol and Jung, Seung-Won and Kim, Ig-Jae and Cho, Junghyun},
-    title     = {MAIR: Multi-View Attention Inverse Rendering With 3D Spatially-Varying Lighting Estimation},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    month     = {06},
-    year      = {2023},
-    pages     = {8392-8401}
+@inproceedings{Choi_2023_CVPR,
+  author    = {Choi, JunYong and Lee, SeokYeong and Park, Haesol and Jung, Seung-Won and Kim, Ig-Jae and Cho, Junghyun},
+  title     = {{MAIR}: Multi-View Attention Inverse Rendering With {3D} Spatially-Varying Lighting Estimation},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  publisher = {IEEE},
+  year      = {2023},
+  month     = jun,
+  pages     = {8392--8401},
+  doi       = {10.1109/CVPR52729.2023.00811},
+  url       = {https://doi.org/10.1109/CVPR52729.2023.00811}
 }
 
 @inproceedings{fipt2023,
-  title={Factorized Inverse Path Tracing for Efficient and Accurate Material-Lighting Estimation},
-  author={Wu, Liwen and Zhu, Rui and Yaldiz, Mustafa B and Zhu, Yinhao and Cai, Hong and Matai, Janarbek and Porikli, Fatih and Li, Tzu-Mao and Chandraker, Manmohan and Ramamoorthi, Ravi},
-  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
-  pages={3848--3858},
-  year={2023}
+  author    = {Wu, Liwen and Zhu, Rui and Yaldiz, Mustafa B. and Zhu, Yinhao and Cai, Hong and Matai, Janarbek and Porikli, Fatih and Li, Tzu-Mao and Chandraker, Manmohan and Ramamoorthi, Ravi},
+  title     = {Factorized Inverse Path Tracing for Efficient and Accurate Material-Lighting Estimation},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  publisher = {IEEE},
+  year      = {2023},
+  month     = oct,
+  pages     = {3848--3858},
+  doi       = {10.1109/ICCV51070.2023.00356},
+  url       = {https://doi.org/10.1109/ICCV51070.2023.00356}
 }
 
 @inproceedings{Jin2023TensoIR,
-  title={TensoIR: Tensorial Inverse Rendering},
-  author={Jin, Haian and Liu, Isabella and Xu, Peijia and Zhang, Xiaoshuai and Han, Songfang and Bi, Sai and Zhou, Xiaowei and Xu, Zexiang and Su, Hao},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year={2023}
-}
-
-@inproceedings{yao2022neilf,
-  title={NeILF: Neural Incident Light Field for Physically-based Material Estimation},
-  author={Yao Yao and Jingyang Zhang and Jingbo Liu and Yihang Qu and Tian Fang and David McKinnon and Yanghai Tsin and Long Quan},
-  booktitle={European Conference on Computer Vision (ECCV)},
-  year={2022}
-}
-
-@article{zhang2023neilfpp,
-  title={NeILF++: Inter-reflectable Light Fields for Geometry and Material Estimation},
-  author={Zhang, Jingyang and Yao, Yao and Li, Shiwei and Liu, Jingbo and Fang, Tian and McKinnon,
-  David and Tsin, Yanghai and Quan, Long},
-  journal={International Conference on Computer Vision (ICCV)},
-  year={2023}
-}
-
-@inproceedings{Munkberg_2022_CVPR,
-  author    = {Munkberg, Jacob and Hasselgren, Jon and Shen, Tianchang and Gao, Jun and Chen, Wenzheng 
-                and Evans, Alex and M\"uller, Thomas and Fidler, Sanja},
-  title     = "{Extracting Triangular 3D Models, Materials, and Lighting From Images}",
+  author    = {Jin, Haian and Liu, Isabella and Xu, Peijia and Zhang, Xiaoshuai and Han, Songfang and Bi, Sai and Zhou, Xiaowei and Xu, Zexiang and Su, Hao},
+  title     = {{TensoIR}: Tensorial Inverse Rendering},
   booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  month     = {06},
-  year      = {2022},
-  pages     = {8280-8290}
+  publisher = {IEEE},
+  year      = {2023},
+  month     = jun,
+  pages     = {165--174},
+  doi       = {10.1109/CVPR52729.2023.00024},
+  url       = {https://doi.org/10.1109/CVPR52729.2023.00024}
 }
 
-@article{nvdiffrecmc2022,
-  author = {Jon Hasselgren and Nikolai Hofmann and Jacob Munkberg},
-  title = "{Shape, Light, and Material Decomposition from Images using Monte Carlo Rendering and Denoising}",
-  journal = {arXiv:2206.03380},
-  year = {2022}
+@incollection{yao2022neilf,
+  author    = {Yao, Yao and Zhang, Jingyang and Liu, Jingbo and Qu, Yihang and Fang, Tian and McKinnon, David and Tsin, Yanghai and Quan, Long},
+  title     = {{NeILF}: Neural Incident Light Field for Physically-Based Material Estimation},
+  booktitle = {Computer Vision -- ECCV 2022},
+  publisher = {Springer Nature Switzerland},
+  year      = {2022},
+  pages     = {700--716},
+  isbn      = {978-3-031-19821-2},
+  doi       = {10.1007/978-3-031-19821-2_40},
+  url       = {https://doi.org/10.1007/978-3-031-19821-2_40}
+}
+
+@inproceedings{zhang2023neilfpp,
+  author    = {Zhang, Jingyang and Yao, Yao and Li, Shiwei and Liu, Jingbo and Fang, Tian and McKinnon, David and Tsin, Yanghai and Quan, Long},
+  title     = {{NeILF++}: Inter-Reflectable Light Fields for Geometry and Material Estimation},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  publisher = {IEEE},
+  year      = {2023},
+  month     = oct,
+  pages     = {3601--3610},
+  doi       = {10.1109/ICCV51070.2023.00333},
+  url       = {https://doi.org/10.1109/ICCV51070.2023.00333}
 }
 
 @inproceedings{zhu2023i2,
-  title={I2-SDF: Intrinsic Indoor Scene Reconstruction and Editing via Raytracing in Neural SDFs},
-  author={Zhu, Jingsen and Huo, Yuchi and Ye, Qi and Luan, Fujun and Li, Jifan and Xi, Dianbing and Wang, Lisha and Tang, Rui and Hua, Wei and Bao, Hujun and others},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={12489--12498},
-  year={2023}
+  author    = {Zhu, Jingsen and Huo, Yuchi and Ye, Qi and Luan, Fujun and Li, Jifan and Xi, Dianbing and Wang, Lisha and Tang, Rui and Hua, Wei and Bao, Hujun and Wang, Rui},
+  title     = {{I2-SDF}: Intrinsic Indoor Scene Reconstruction and Editing via Raytracing in Neural {SDFs}},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  publisher = {IEEE},
+  year      = {2023},
+  month     = jun,
+  pages     = {12489--12498},
+  doi       = {10.1109/CVPR52729.2023.01202},
+  url       = {https://doi.org/10.1109/CVPR52729.2023.01202}
 }
 
 @inproceedings{gu2025tensoflow,
-  title={TensoFlow: Tensorial Flow-based Sampler for Inverse Rendering},
-  author={Gu, Chun and Wei, Xiaofei and Zhang, Li and Zhu, Xiatian},
-  booktitle={CVPR},
-  year={2025},
+  author    = {Gu, Chun and Wei, Xiaofei and Zhang, Li and Zhu, Xiatian},
+  title     = {{TensoFlow}: Tensorial Flow-Based Sampler for Inverse Rendering},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  publisher = {IEEE},
+  year      = {2025},
+  month     = jun,
+  pages     = {495--504},
+  doi       = {10.1109/CVPR52734.2025.00055},
+  url       = {https://doi.org/10.1109/CVPR52734.2025.00055}
 }
 
 @inproceedings{HDR_EM_estim,
-  title = {HDR Environment Map Estimation for Real-Time Augmented Reality},
-  booktitle = {CVPR},
-  author = {Gowri Somanath and Daniel Kurz},
-  year = {2021},
+  author    = {Somanath, Gowri and Kurz, Daniel},
+  title     = {{HDR} Environment Map Estimation for Real-Time Augmented Reality},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  publisher = {IEEE},
+  year      = {2021},
+  month     = jun,
+  pages     = {11298--11306},
+  doi       = {10.1109/CVPR46437.2021.01114},
+  url       = {https://doi.org/10.1109/CVPR46437.2021.01114}
 }
 
 @article{ALT2024,
-  author = {Lipp, Lukas and Hahn, David and Ecormier-Nocca, Pierre and Rist, Florian and Wimmer, Michael},
-  title = {View-Independent Adjoint Light Tracing for Lighting Design Optimization},
-  year = {2024},
-  issue_date = {June 2024},
+  author    = {Lipp, Lukas and Hahn, David and Ecormier-Nocca, Pierre and Rist, Florian and Wimmer, Michael},
+  title     = {View-Independent Adjoint Light Tracing for Lighting Design Optimization},
+  journal   = {ACM Transactions on Graphics},
   publisher = {Association for Computing Machinery},
-  address = {New York, NY, USA},
-  volume = {43},
-  number = {3},
-  journal = {ACM Trans. Graph.},
-  month = {05},
+  year      = {2024},
+  month     = may,
+  volume    = {43},
+  number    = {3},
   articleno = {35},
-  numpages = {16},
+  numpages  = {16},
+  pages     = {35:1--35:16},
+  doi       = {10.1145/3662180},
+  url       = {https://doi.org/10.1145/3662180}
 }
 
-@InProceedings{R3DG2023,
-  author    = {Gao, Jian and Gu, Chun and Lin, Youtian and Zhu, Hao and Cao, Xun and Zhang, Li and Yao, Yao},
-  title     = {Relightable 3D Gaussian: Real-time Point Cloud Relighting with BRDF Decomposition and Ray Tracing},
+@incollection{R3DG2023,
+  author    = {Gao, Jian and Gu, Chun and Lin, Youtian and Li, Zhihao and Zhu, Hao and Cao, Xun and Zhang, Li and Yao, Yao},
+  title     = {Relightable {3D} Gaussians: Realistic Point Cloud Relighting with {BRDF} Decomposition and Ray Tracing},
   booktitle = {Computer Vision -- ECCV 2024},
-  pages     = {73--89},
-  year      = {2025},
   publisher = {Springer Nature Switzerland},
+  year      = {2024},
+  pages     = {73--89},
+  isbn      = {978-3-031-72995-9},
+  doi       = {10.1007/978-3-031-72995-9_5},
+  url       = {https://doi.org/10.1007/978-3-031-72995-9_5}
 }
 
-@INPROCEEDINGS{GSIR2024,
-  author={Liang, Zhihao and Zhang, Qi and Feng, Ying and Shan, Ying and Jia, Kui},
-  booktitle={2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, 
-  title={GS-IR: 3D Gaussian Splatting for Inverse Rendering}, 
-  year={2024},
-  volume={},
-  number={},
-  pages={21644-21653},
+@inproceedings{GSIR2024,
+  author    = {Liang, Zhihao and Zhang, Qi and Feng, Ying and Shan, Ying and Jia, Kui},
+  title     = {{GS-IR}: {3D} Gaussian Splatting for Inverse Rendering},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  publisher = {IEEE},
+  year      = {2024},
+  month     = jun,
+  pages     = {21644--21653},
+  doi       = {10.1109/CVPR52733.2024.02045},
+  url       = {https://doi.org/10.1109/CVPR52733.2024.02045}
 }
 
-@article{SVGIR2025,
-  author={Hanxiao Sun and Yupeng Gao and Jin Xie and Jian Yang and Beibei Wang},
-  title={SVG-IR: Spatially-varying Gaussian Splatting for Inverse Rendering},
-  year={2025},
-  journal={Proceedings of CVPR 2025},
+@inproceedings{SVGIR2025,
+  author    = {Sun, Hanxiao and Gao, Yupeng and Xie, Jin and Yang, Jian and Wang, Beibei},
+  title     = {{SVG-IR}: Spatially-Varying Gaussian Splatting for Inverse Rendering},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  publisher = {IEEE},
+  year      = {2025},
+  month     = jun,
+  pages     = {16143--16152},
+  doi       = {10.1109/CVPR52734.2025.01505},
+  url       = {https://doi.org/10.1109/CVPR52734.2025.01505}
 }
 
-% Other
-
-@INPROCEEDINGS{Chen2022ECCV,
-  author = {Anpei Chen and Zexiang Xu and Andreas Geiger and Jingyi Yu and Hao Su},
-  title = {TensoRF: Tensorial Radiance Fields},
-  booktitle = {European Conference on Computer Vision (ECCV)},
-  year = {2022}
+@incollection{Chen2022ECCV,
+  author    = {Chen, Anpei and Xu, Zexiang and Geiger, Andreas and Yu, Jingyi and Su, Hao},
+  title     = {{TensoRF}: Tensorial Radiance Fields},
+  booktitle = {Computer Vision -- ECCV 2022},
+  publisher = {Springer Nature Switzerland},
+  year      = {2022},
+  pages     = {333--350},
+  isbn      = {978-3-031-19824-3},
+  doi       = {10.1007/978-3-031-19824-3_20},
+  url       = {https://doi.org/10.1007/978-3-031-19824-3_20}
 }
-
-
-% Сравнения с аналогами
 
 @misc{DRSDF24Repo,
-	author = {Wang, Zichen},
-	title = "A Simple Approach to Differentiable Rendering of SDFs Repository",
-	year = 2024,
-	url = {https://github.com/zichenwang01/relaxed-boundary/},
-	urldate = {2026-02-10}
+  author       = {Wang, Zichen and Deng, Xi and Zhang, Ziyi and Jakob, Wenzel and Marschner, Steve},
+  title        = {Official Repository for ``A Simple Approach to Differentiable Rendering of {SDFs}''},
+  year         = {2024},
+  howpublished = {GitHub repository},
+  url          = {https://github.com/zichenwang01/relaxed-boundary/},
+  urldate      = {2026-02-10}
 }

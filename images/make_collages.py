@@ -21,6 +21,10 @@ OUT = Path(__file__).resolve().parent
 COLLAGES = {'collage1.png': [('Armadillo', 1), ('Bunny', 10), ('Happy', 0), ('Nefertiti', 4)],
             'collage2.png': [('Demogorgon', 10), ('Doom', 0), ('Helicopter', 0), ('Pufferfish', 0)]}
 CELL, SEP, K = 1024, 10, 4.0
+# Helicopter: the repeat run with the same configuration (in the main run the details of the rotor hub were not
+# reconstructed), as in the tables of the report
+REPEAT = {'Helicopter': (Path.home() / 'repos/DRMeasure',
+                         Path.home() / 'repos/papers/Труды ИСП РАН 2026/sparsedr_out_2026-11-measure.txt')}
 
 
 def final_view_psnr(log):
@@ -51,13 +55,15 @@ def diff_image(ref, rec):
 
 def main():
     psnr = final_view_psnr(LOG)
+    psnr_rep = {m: final_view_psnr(log) for m, (_, log) in REPEAT.items()}
     font = ImageFont.truetype(str(FONT), 42)
     for name, items in COLLAGES.items():
         canvas = Image.new('RGB', (3 * CELL + 2 * SEP, len(items) * CELL + (len(items) - 1) * SEP), 'white')
         for r, (model, view) in enumerate(items):
             scene = model + 'NewLong'
-            ref = np.array(Image.open(RUN / scene / 'ref' / f'ref_{view}.png').convert('RGB').resize((CELL, CELL)))
-            rec = np.array(Image.open(RUN / scene / 'res' / f'ep7_res_{view}.png').convert('RGB').resize((CELL, CELL)))
+            run, ps = (REPEAT[model][0], psnr_rep[model]) if model in REPEAT else (RUN, psnr)
+            ref = np.array(Image.open(run / scene / 'ref' / f'ref_{view}.png').convert('RGB').resize((CELL, CELL)))
+            rec = np.array(Image.open(run / scene / 'res' / f'ep7_res_{view}.png').convert('RGB').resize((CELL, CELL)))
             y = r * (CELL + SEP)
             for c, img in enumerate((ref, rec, diff_image(ref, rec))):
                 canvas.paste(Image.fromarray(img), (c * (CELL + SEP), y))
@@ -65,8 +71,8 @@ def main():
             kw = dict(font=font, fill='white', stroke_width=2, stroke_fill='black')
             dr.text((22, y + CELL - 62), 'reference', **kw)
             dr.text((CELL + SEP + 22, y + CELL - 118), 'reconstruction', **kw)
-            dr.text((CELL + SEP + 22, y + CELL - 62), f'PSNR = {psnr[scene][view]:.4f}', **kw)
-            print(name, model, view, psnr[scene][view])
+            dr.text((CELL + SEP + 22, y + CELL - 62), f'PSNR = {ps[scene][view]:.4f}', **kw)
+            print(name, model, view, ps[scene][view])
         canvas.save(OUT / name)
 
 

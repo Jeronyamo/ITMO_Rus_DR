@@ -209,8 +209,9 @@ c_{i,k}\geq 0.
 \leq
 \theta_{\max},
 \qquad
-0<\theta_{\min}<\theta_{\max}\leq\frac{\pi}{2}.
+0<\theta_{\min}<\theta_{\max}<\frac{\pi}{2}.
 \end{equation}
+В реализации используются границы $\theta_{\min}\geq0.5^\circ$ и $\theta_{\max}\leq89^\circ$: на границах $0$ и $\pi/2$ показатель диаграммы, вычисляемый по углу $\theta$, не определён (см. ниже).
 
 Для этого вводится неограниченная переменная $z_i^\theta$:
 \begin{equation}

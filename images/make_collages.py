@@ -1,7 +1,7 @@
 """Collages of reconstruction examples for chapter 4 (collage1.png, collage2.png): reference, reconstruction after the
 last epoch with the PSNR of this view, and the difference (blue: reconstruction brighter, red: darker, contrast x4).
 
-Data: run of scripts/run_sparsedr_measurements.sh in LiteRT (~/repos/DRMeasure2: <scene>/ref/ref_<view>.png,
+Data: run of scripts/run_sparsedr_measurements.sh in LiteRT (~/repos/DRMeasureFinal: <scene>/ref/ref_<view>.png,
 <scene>/res/ep7_res_<view>.png) and its log with the per-view PSNR of the final evaluation.
 Usage: python make_collages.py [run_dir] [log]
 """
@@ -12,19 +12,15 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-RUN = Path(sys.argv[1] if len(sys.argv) > 1 else Path.home() / 'repos/DRMeasure2')
+RUN = Path(sys.argv[1] if len(sys.argv) > 1 else Path.home() / 'repos/DRMeasureFinal')
 LOG = Path(sys.argv[2] if len(sys.argv) > 2 else
-           Path.home() / 'repos/papers/Труды ИСП РАН 2026/sparsedr_out_2026-11-measure2.txt')
+           Path.home() / 'repos/papers/Труды ИСП РАН 2026/sparsedr_out_2026-11-final.txt')
 FONT = Path.home() / 'repos/papers/Труды ИСП РАН 2026/NotoSans-Regular.ttf'
 OUT = Path(__file__).resolve().parent
 # (model, view) per collage: the views of the previous version of the collages
 COLLAGES = {'collage1.png': [('Armadillo', 1), ('Bunny', 10), ('Happy', 0), ('Nefertiti', 4)],
             'collage2.png': [('Demogorgon', 10), ('Doom', 0), ('Helicopter', 0), ('Pufferfish', 0)]}
 CELL, SEP, K = 1024, 10, 4.0
-# Helicopter: the repeat run with the same configuration (in the main run the details of the rotor hub were not
-# reconstructed), as in the tables of the report
-REPEAT = {'Helicopter': (Path.home() / 'repos/DRMeasure',
-                         Path.home() / 'repos/papers/Труды ИСП РАН 2026/sparsedr_out_2026-11-measure.txt')}
 
 
 def final_view_psnr(log):
@@ -55,13 +51,12 @@ def diff_image(ref, rec):
 
 def main():
     psnr = final_view_psnr(LOG)
-    psnr_rep = {m: final_view_psnr(log) for m, (_, log) in REPEAT.items()}
     font = ImageFont.truetype(str(FONT), 42)
     for name, items in COLLAGES.items():
         canvas = Image.new('RGB', (3 * CELL + 2 * SEP, len(items) * CELL + (len(items) - 1) * SEP), 'white')
         for r, (model, view) in enumerate(items):
             scene = model + 'NewLong'
-            run, ps = (REPEAT[model][0], psnr_rep[model]) if model in REPEAT else (RUN, psnr)
+            run, ps = RUN, psnr
             ref = np.array(Image.open(run / scene / 'ref' / f'ref_{view}.png').convert('RGB').resize((CELL, CELL)))
             rec = np.array(Image.open(run / scene / 'res' / f'ep7_res_{view}.png').convert('RGB').resize((CELL, CELL)))
             y = r * (CELL + SEP)

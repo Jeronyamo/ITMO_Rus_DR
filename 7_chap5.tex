@@ -259,8 +259,12 @@ c_{i,k}\geq 0.
 \begin{equation}
 D_i(\boldsymbol{\omega})
 =
-\left[\max\left(0,\mathbf{n}_L\cdot\boldsymbol{\omega}\right)\right]^{\kappa_i}.
+\begin{cases}
+\left(\mathbf{n}_L\cdot\boldsymbol{\omega}\right)^{\kappa_i}, & \mathbf{n}_L\cdot\boldsymbol{\omega}>0,\\
+0, & \mathbf{n}_L\cdot\boldsymbol{\omega}\le 0,
+\end{cases}
 \end{equation}
+то есть излучение задаётся кусочно: степенная модель в излучающей полусфере и ноль вне её.
 
 Сила света малого элемента площади $\Delta A_i$ в направлении $\boldsymbol{\omega}$ пропорциональна произведению яркости на косинус угла с нормалью, то есть $D_i(\boldsymbol{\omega})\cos\alpha=\cos^{\kappa_i+1}\alpha$. Показатель $\kappa_i$ определяется из условия, что при $\alpha=\theta_i$ сила света уменьшается вдвое:
 \begin{equation}
@@ -271,7 +275,7 @@ D_i(\boldsymbol{\omega})
 \frac{\ln(1/2)}{\ln(\cos\theta_i)}-1.
 \label{eq:kappa}
 \end{equation}
-При $\theta_i=60^\circ$ получаем $\kappa_i=0$, то есть ламбертовский излучатель с постоянной по направлениям яркостью; при $\theta_i\in(0^\circ,90^\circ)$ показатель $\kappa_i\in(-1,\infty)$.
+При $\theta_i=60^\circ$ получаем $\kappa_i=0$, то есть ламбертовский излучатель с постоянной по направлениям яркостью; при $\theta_i\in(0^\circ,90^\circ)$ показатель $\kappa_i\in(-1,\infty)$. Граничные значения $\theta_i=0^\circ$ и $90^\circ$ формулой~\eqref{eq:kappa} не определены, поэтому в реализации угол ограничен диапазоном $\theta_i\in[0.5^\circ,89^\circ]$, что соответствует $\kappa_i\in[-0.83,\,1.8\cdot10^4]$; при оптимизации $\theta_i$ параметризуется сигмоидой внутри этого диапазона. Отрицательные $\kappa_i$ ($\theta_i>60^\circ$) описывают диаграммы шире ламбертовской: яркость такого элемента неограниченно растёт при приближении направления к касательному, но сила света $\cos^{\kappa_i+1}\alpha$ стремится к нулю, так как $\kappa_i+1>0$, и поток элемента конечен. Направления с $\mathbf{n}_L\cdot\boldsymbol{\omega}\le0$ в реализации дают нулевую яркость.
 
 Исходящая яркость ячейки $i$ в направлении $\boldsymbol{\omega}$ задаётся выражением
 \begin{equation}
@@ -280,7 +284,7 @@ D_i(\boldsymbol{\omega})
 \eta_i\,
 \mathbf{c}_i\,
 Z(\kappa_i)
-\left[\max\left(0,\mathbf{n}_L\cdot\boldsymbol{\omega}\right)\right]^{\kappa_i},
+D_i(\boldsymbol{\omega}),
 \qquad
 Z(\kappa_i)
 =

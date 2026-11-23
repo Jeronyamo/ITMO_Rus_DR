@@ -16,14 +16,21 @@
 
 В рамках принятой договорённости \emph{яркость} $L(\mathbf{x},\boldsymbol{\omega})$ является направленной величиной, заданной в точке поверхности $\mathbf{x}$ для направления $\boldsymbol{\omega}$. \emph{Освещённость} $E(\mathbf{x})$ есть интегральная яркость, приходящая в точку по верхней полусфере направлений, с косинусным весом. Все величины могут рассматриваться поканально в линейном RGB-представлении.
 
-\begin{table}[htbp]
-\centering
-\small
-\renewcommand{\arraystretch}{1.18}
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.23\textwidth} >{\raggedright\arraybackslash}p{0.19\textwidth} X}
+{\small\renewcommand{\arraystretch}{1.18}
+\begin{xltabular}{\textwidth}{>{\raggedright\arraybackslash}p{0.23\textwidth} >{\raggedright\arraybackslash}p{0.19\textwidth} >{\raggedright\arraybackslash}X}
 \toprule
 \textbf{Термин или обозначение} & \textbf{Английский эквивалент} & \textbf{Определение в настоящей работе} \\
 \midrule
+\endfirsthead
+\multicolumn{3}{l}{\textit{Продолжение таблицы~\thetable}}\\
+\toprule
+\textbf{Термин или обозначение} & \textbf{Английский эквивалент} & \textbf{Определение в настоящей работе} \\
+\midrule
+\endhead
+\bottomrule
+\noalign{\vskip 8pt}
+\caption{Используемые в главе термины и обозначения.}\label{tab:method-terms}
+\endlastfoot
 Расчёт освещённости & lighting simulation, light transport & Моделирование распространения света в сцене и численное вычисление интеграла освещённости. \\
 
 Глобальная освещённость & global illumination & Распределение света в сцене с учётом прямого и вторичного освещения. \\
@@ -71,11 +78,7 @@ $\eta$ & radiant exitance & Поток излучения с единицы пл
 $\mathbf{c}$ & normalized RGB chromaticity & Нормированный неотрицательный RGB-вектор цветности: $\|\mathbf{c}\|_1=1$. \\
 
 Coarse-to-fine & multiresolution optimization & Многоуровневая оптимизация от низкого разрешения текстуры источника к более высокому. \\
-\bottomrule
-\end{tabularx}
-\caption{Используемые в главе термины и обозначения.}
-\label{tab:method-terms}
-\end{table}
+\end{xltabular}}
 
 \section{Постановка задачи}
 

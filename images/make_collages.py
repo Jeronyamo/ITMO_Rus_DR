@@ -1,5 +1,5 @@
 """Collages of reconstruction examples for chapter 4 (collage1.png, collage2.png): reference, reconstruction after the
-last epoch with the PSNR of this view, and the difference (blue: reconstruction brighter, red: darker, contrast x4).
+last epoch with the PSNR of this view, and the difference (blue: reconstruction brighter, red: darker, contrast x12).
 
 Data: run of scripts/run_sparsedr_measurements.sh in LiteRT (~/repos/DRMeasureFinal: <scene>/ref/ref_<view>.png,
 <scene>/res/ep7_res_<view>.png) and its log with the per-view PSNR of the final evaluation.
@@ -20,7 +20,7 @@ OUT = Path(__file__).resolve().parent
 # (model, view) per collage: the views of the previous version of the collages
 COLLAGES = {'collage1.png': [('Armadillo', 1), ('Bunny', 10), ('Happy', 0), ('Nefertiti', 4)],
             'collage2.png': [('Demogorgon', 10), ('Doom', 0), ('Helicopter', 0), ('Pufferfish', 0)]}
-CELL, SEP, K = 1024, 10, 4.0
+CELL, SEP, K = 1024, 10, 12.0
 
 
 def final_view_psnr(log):
@@ -51,7 +51,7 @@ def diff_image(ref, rec):
 
 def main():
     psnr = final_view_psnr(LOG)
-    font = ImageFont.truetype(str(FONT), 42)
+    font = ImageFont.truetype(str(FONT), 72)
     for name, items in COLLAGES.items():
         canvas = Image.new('RGB', (3 * CELL + 2 * SEP, len(items) * CELL + (len(items) - 1) * SEP), 'white')
         for r, (model, view) in enumerate(items):
@@ -63,10 +63,10 @@ def main():
             for c, img in enumerate((ref, rec, diff_image(ref, rec))):
                 canvas.paste(Image.fromarray(img), (c * (CELL + SEP), y))
             dr = ImageDraw.Draw(canvas)
-            kw = dict(font=font, fill='white', stroke_width=2, stroke_fill='black')
-            dr.text((22, y + CELL - 62), 'reference', **kw)
-            dr.text((CELL + SEP + 22, y + CELL - 118), 'reconstruction', **kw)
-            dr.text((CELL + SEP + 22, y + CELL - 62), f'PSNR = {ps[scene][view]:.4f}', **kw)
+            kw = dict(font=font, fill='white', stroke_width=3, stroke_fill='black')
+            dr.text((24, y + CELL - 100), 'референс', **kw)
+            dr.text((CELL + SEP + 24, y + CELL - 190), 'реконструкция', **kw)
+            dr.text((CELL + SEP + 24, y + CELL - 100), f'PSNR {ps[scene][view]:.1f} дБ'.replace('.', ','), **kw)
             print(name, model, view, ps[scene][view])
         canvas.save(OUT / name)
 

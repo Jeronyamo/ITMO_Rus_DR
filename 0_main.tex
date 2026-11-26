@@ -11,7 +11,7 @@
 %%% Задаем языковые параметры и шрифт %%%
 
 \usepackage[english, russian]{babel}                % Настройки для русского языка как основного в тексте
-\babelfont{rm}{Times New Roman}                     % TMR в качестве базового roman-щрифта
+\babelfont{rm}{Liberation Serif}                     % TMR в качестве базового roman-щрифта
 
 %%% Задаем стиль заголовков и подзаголовков в тексте %%%
 
@@ -82,7 +82,7 @@
 \graphicspath{{images/}} % Определяем папку с рисунками
 \captionsetup[figure]{font=small, width=\textwidth, name=Рисунок, justification=centering} % Задаем параметры подписей к рисункам: маленький шрифт (в данном случае 12pt), ширина равна ширине текста, полнотекстовая надпись "Рисунок", выравнивание по центру
 \captionsetup[subfigure]{font=small} % Индексы подрисунков а), б) и так далее тоже шрифтом 12pt (по умолчанию делает еще меньше)
-\captionsetup[table]{singlelinecheck=false,font=small,width=\textwidth,justification=justified} % Задаем параметры подписей к таблицам: запрещаем переносы, маленький шрифт (в данном случае 12pt), ширина равна ширине текста, выравнивание по ширине
+\captionsetup[table]{position=top,singlelinecheck=false,font=small,width=\textwidth,justification=justified} % Задаем параметры подписей к таблицам: запрещаем переносы, маленький шрифт (в данном случае 12pt), ширина равна ширине текста, выравнивание по ширине
 \captiondelim{ --- } % Разделителем между номером рисунка/таблицы и текстом в подписи является длинное тире
 \setkeys{Gin}{width=\textwidth} % По умолчанию размер всех добавляемых рисунков будет подгоняться под ширину текста
 \renewcommand{\thesubfigure}{\asbuk{subfigure}} % Нумерация подрисунков строчными буквами кириллицы
@@ -170,26 +170,36 @@ isbn=false,                                         % Не показывать 
 \usepackage[version=4]{mhchem}                      % Красивые химические уравнения
 \usepackage{amsmath}                                % Усовершенствование отображения математических выражений 
 \usepackage{amsfonts}                               % Для обозначений множеств чисел
+\usepackage{xcolor}                                 % Цвет для пометок
+\newcommand{\todo}[1]{\textcolor{red}{[#1]}}         % Пометка о том, что нужно уточнить
+\usepackage{totcount}                               % Общее число рисунков, таблиц и источников для реферата
+\regtotcounter{figure}
+\regtotcounter{table}
+\newtotcounter{citesnum}
+\AtEveryBibitem{\stepcounter{citesnum}}
 
 %%% Вставляем по очереди все содержательные части документа %%%
 
 \begin{document}
 
-% \input{1_title}                                     % Титульник
+\input{1_title}                                      % Титульный лист и список исполнителей
 
 \newpage % Переходим на новую страницу
-\setcounter{page}{2} % Начинаем считать номера страниц со второй
 \OnehalfSpacing* % Задаем полуторный интервал текста (в титульнике одинарный, поэтому команда стоит после него)
+
+\input{2_abstract}                                  % Реферат
 
 \tableofcontents*                                   % Автособираемое оглавление
 
-% \input{2_intro}                                     % Введение
-\input{3_chap1}                                     % Первая глава
-\input{4_chap2}                                     % Вторая глава
-\input{5_chap3}                                     % Третья глава
-\input{6_chap4}                                     % Четвертая глава
-\input{7_chap5}                                  % Пятая глава
-\input{8_chap6}                                     % Шестая глава
+\input{2_terms}                                     % Термины, обозначения и сокращения
+\input{2_intro}                                     % Введение
+\input{3_chap1}                                     % 1 Обзор методов дифференцируемого рендеринга поверхностей
+\input{4_chap2}                                     % 2 Метод дифференцируемого рендеринга поверхностей
+\input{6_chap4}                                     % 3 Сравнение метода дифференцируемого рендеринга поверхностей с аналогами
+\input{5_chap3}                                     % 4 Обзор методов реконструкции освещения
+\input{7_chap5}                                     % 5 Метод реконструкции освещения
+\input{8_chap6}                                     % 6 Сравнение метода реконструкции освещения с аналогами
+\input{9_conclusion}                                % Заключение
 
 \printbibliography[title=Список использованных источников] % Автособираемый список литературы
 
